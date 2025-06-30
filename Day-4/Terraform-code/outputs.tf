@@ -24,7 +24,9 @@
 # }
 
 
-# output "splat_of_three_ips" {
-#     value = aws_instance.web[*].public_ip
+#This splat operator works only along with count
+
+output "instance_ips" {
+    value = [for i in aws_instance.web: i.public_ip]
   
-# }
+}

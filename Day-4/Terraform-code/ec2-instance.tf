@@ -1,37 +1,5 @@
-# I want to create an ec2 instance in each availability zone
-# I want to create a amazon linux in dev-server and ubuntu in prod-server, also the names should eb dev-server and prod-server
-
-data "aws_availability_zones" "example" {
-  filter {
-    name   = "opt-in-status"
-    values = ["opt-in-not-required"]
-  }
-}
-
-# output "az_output" {
-#   value = data.aws_availability_zones.example.names
-  
-# }
-
-variable "ec_config" {
-  type = map(object({
-    ami = string
-    instance_type = string
-  }))
-  default = {
-    "frontend" = {
-      ami = "ami-05ffe3c48a9991133"
-      instance_type = "t2.micro"
-    }
-    "backend" = {
-      ami = "ami-020cba7c55df1f615"
-      instance_type = "t3.micro"
-    }
-  }
-}
-
 resource "aws_instance" "web" {
-  for_each        = var.ec_config
+  for_each        = var.ec2_config
   ami             = each.value.ami
   instance_type   = each.value.instance_type
   key_name        = var.key_name
@@ -42,3 +10,30 @@ resource "aws_instance" "web" {
     Name = "${each.key}"
   }
 }
+
+data "aws_availability_zones" "example" {
+  filter {
+    name   = "opt-in-status"
+    values = ["opt-in-not-required"]
+  }
+}
+
+output "a_zone_information" {
+  value = data.aws_availability_zones.example.names
+}
+
+
+
+
+
+#webserver-1, webserver-2 ...
+
+# I wanted to create an ec2 instance in each availability zone in that region
+
+
+# I wanted to create 2 ec2 instances one for dev environment and another for in prod environment
+# In dev i wanted to have amazon linux instance with t2.micro
+# in Prod I wanted to have an ubuntu machine with t3.micro
+#dev shpuld have dev-server and prod-server
+
+# meta arguments - count , for_each
