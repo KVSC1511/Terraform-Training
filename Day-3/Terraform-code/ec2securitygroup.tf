@@ -4,17 +4,17 @@ resource "aws_security_group" "ssh_sg" {
 
   ingress {
     description = "Allow enter inside the ec2 from anywhere"
-    from_port   = 22
-    to_port     = 22
+    from_port   = var.ssh_port
+    to_port     = var.ssh_port
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = var.cidr_block
   }
 
   egress {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = var.cidr_block
   }
 
   tags = {
