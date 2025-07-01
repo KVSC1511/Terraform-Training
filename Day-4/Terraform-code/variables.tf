@@ -37,3 +37,25 @@ variable "instance_type_map" {
     "prod" = "t3.large"
   }
 }
+
+
+#map(object)
+
+variable "ec2_config" {
+  type = map(object({
+    ami = string
+    instance_type = string
+  }))
+  description = "this is a map(object) variable containing ec2 configuration"
+  default = {
+    "dev-server" = {
+      ami = "ami-05ffe3c48a9991133"
+      instance_type = "t2.micro"
+    }
+    "prod-server" = {
+      ami = "ami-020cba7c55df1f615"
+      instance_type = "t3.micro"
+    }
+  }
+}
+
