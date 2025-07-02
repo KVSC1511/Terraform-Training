@@ -1,16 +1,17 @@
-# Terraform Block
+# Terraform Settings Block
 terraform {
-  required_version = "~>1.12.2" 
+  required_version = "~>1.12.2"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = ">= 6.0"  
+      version = "6.0.0"
     }
   }
 }
+#Terraform Provider Block
 
-# Provider Block
 provider "aws" {
-  region  = var.aws_region
   profile = "terraform-training"
+  region  = "us-east-1"
+
 }
