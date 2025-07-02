@@ -67,6 +67,52 @@ Day-3/
 - Splat expressions for resource referencing
 - Advanced Terraform patterns
 
+### **Day 4: Availability Zones & For-Each**
+```
+Day-4/
+├── Availability-Zone/              # AZ concepts and usage
+├── For-Each-Terraform/             # For-each meta-argument
+├── Terraform-code/                 # Practical examples
+└── README.md                       # Day 4 overview
+```
+
+**Topics Covered:**
+- Availability Zone concepts and best practices
+- For-each meta-argument for dynamic resource creation
+- Advanced resource iteration patterns
+- Multi-AZ infrastructure deployment
+
+### **Day 5: VPC & Terraform Modules**
+```
+Day-5/
+├── 01-VPC-INFO/                    # VPC fundamentals and concepts
+├── 02-AWS-VPC-using-Mgmt-Console/  # Manual VPC creation
+└── 03-Terraform-Modules/           # Module concepts and usage
+```
+
+**Topics Covered:**
+- VPC fundamentals and networking concepts
+- Subnet, Route Table, and CIDR block management
+- Internet Gateway and NAT Gateway configuration
+- Terraform module basics and best practices
+- Module structure and reusability
+
+### **Day 6: Advanced Modules & Functions**
+```
+Day-6/
+├── 01-Terraform-Modules_Notes/     # Advanced module concepts
+├── 02-Vpc-With_Module_Code/        # VPC module implementation
+├── 03-Locals-tfvars/               # Local values and tfvars
+└── 04-Terraform-Functions/         # Built-in Terraform functions
+```
+
+**Topics Covered:**
+- Advanced module patterns and best practices
+- VPC module implementation with Terraform
+- Local values and variable files (tfvars)
+- Terraform built-in functions and expressions
+- Production-ready module development
+
 ## 🛠️ Prerequisites
 
 Before starting this course, ensure you have:
@@ -118,6 +164,24 @@ Begin with Day 1 and progress through each module sequentially.
 - **Conditional Logic**: Dynamic resource creation
 - **Splat Expressions**: Efficient resource referencing
 - **Advanced Patterns**: Production-ready configurations
+
+### Day 4: Availability Zones & For-Each
+- **Availability Zones**: Multi-AZ infrastructure concepts
+- **For-Each Meta-Argument**: Dynamic resource creation
+- **Advanced Iteration**: Complex resource patterns
+- **High Availability**: Production-ready infrastructure
+
+### Day 5: VPC & Modules
+- **VPC Fundamentals**: Networking concepts and design
+- **Manual VPC Creation**: AWS Console hands-on practice
+- **Terraform Modules**: Code reusability and organization
+- **Module Best Practices**: Industry-standard patterns
+
+### Day 6: Advanced Modules & Functions
+- **Advanced Modules**: Complex module patterns
+- **VPC Module Implementation**: Real-world module development
+- **Local Values & tfvars**: Advanced variable management
+- **Terraform Functions**: Built-in functions and expressions
 
 ## 🔧 Key Features
 
