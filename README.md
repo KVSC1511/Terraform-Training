@@ -146,6 +146,22 @@ Day-6/
 - Terraform built-in functions and expressions
 - Production-ready module development
 
+### **Day 7: Advanced Networking, Bastion & Provisioners**
+```
+Day-7/
+├── 00-Newtworking-Notes/           # Networking concepts, public/private subnets, Bastion host
+├── 01-Vpc-With_Module_Code/        # VPC with modules, Bastion, EC2, security groups, user data
+├── 02-null-resource/               # null_resource, provisioners, local-exec, remote-exec
+└── 03-depends_on_and_Bastion/      # depends_on meta-argument, Bastion host use cases
+```
+
+**Topics Covered:**
+- Public and private subnet design, Bastion host concepts (with analogies)
+- VPC implementation using modules, Bastion and private EC2 setup, user data scripts
+- Terraform `null_resource`, provisioners (`local-exec`, `remote-exec`), file uploads, and best practices
+- Explicit resource dependencies with `depends_on`
+- Secure access patterns for private infrastructure
+
 ## 🛠️ Prerequisites
 
 Before starting this course, ensure you have:
@@ -216,6 +232,13 @@ Begin with Day 1 and progress through each module sequentially.
 - **Local Values & tfvars**: Advanced variable management
 - **Terraform Functions**: Built-in functions and expressions
 
+### Day 7: Advanced Networking, Bastion & Provisioners
+- **Networking Concepts**: Public/private subnets, Bastion host, security group mapping
+- **VPC with Modules**: Modular VPC, Bastion, EC2, user data automation
+- **Provisioners & null_resource**: `local-exec`, `remote-exec`, file uploads, triggers
+- **depends_on**: Explicit resource dependencies and orchestration
+- **Best Practices**: Secure access, production patterns
+
 ## 🔧 Key Features
 
 - **Hands-on Practice**: Every concept includes working examples
@@ -283,10 +306,13 @@ module "vpc" {
 5. **Day 5**: VPC design and module basics
 6. **Day 6**: Advanced modules and production patterns
 
+### **Week 3: Advanced Networking & Provisioning**
+7. **Day 7**: Advanced networking, Bastion, and provisioners
+
 ### **Skill Progression**
 - **Beginner** (Day 1-2): Basic Terraform concepts and simple deployments
 - **Intermediate** (Day 3-4): Advanced patterns and multi-resource management
-- **Advanced** (Day 5-6): Complex architectures and production-ready modules
+- **Advanced** (Day 5-7): Complex architectures and production-ready modules
 
 ## 🤝 Contributing
 
