@@ -2,9 +2,29 @@
 
 [![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)](https://www.terraform.io/)
 [![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)](https://aws.amazon.com/)
+[![Infrastructure as Code](https://img.shields.io/badge/IaC-Infrastructure%20as%20Code-blue?style=for-the-badge)](https://www.terraform.io/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/KVSC1511/Terraform-Training?style=for-the-badge)](https://github.com/KVSC1511/Terraform-Training/stargazers)
 
 A comprehensive, hands-on Terraform training course designed to take you from beginner to advanced Infrastructure as Code (IaC) practitioner. This repository contains practical examples, real-world scenarios, and step-by-step guides for mastering Terraform with AWS.
+
+## 📋 Table of Contents
+
+- [📚 Course Overview](#-course-overview)
+- [🎯 Learning Objectives](#-learning-objectives)
+- [🏗️ What You'll Build](#️-what-youll-build)
+- [📁 Course Structure](#-course-structure)
+- [🛠️ Prerequisites](#️-prerequisites)
+- [🚀 Quick Start](#-quick-start)
+- [📖 Course Content Details](#-course-content-details)
+- [🔧 Key Features](#-key-features)
+- [📋 Example Usage](#-example-usage)
+- [🎓 Learning Path](#-learning-path)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [🙏 Acknowledgments](#-acknowledgments)
+- [📞 Support](#-support)
+- [🔗 Useful Links](#-useful-links)
 
 ## 📚 Course Overview
 
@@ -17,7 +37,20 @@ This training is structured as a progressive learning path, covering essential T
 - **Understand Terraform workflow** (init, plan, apply, destroy)
 - **Work with variables, data sources, and outputs**
 - **Implement advanced features** like count, loops, and conditional resources
+- **Design and implement VPC architectures** with proper networking
+- **Create reusable Terraform modules** for production environments
 - **Follow security best practices** for infrastructure management
+
+## 🏗️ What You'll Build
+
+By the end of this course, you'll have hands-on experience building:
+
+- **Multi-tier web applications** with EC2 instances and security groups
+- **VPC architectures** with public and private subnets
+- **Load balancers** and auto-scaling groups
+- **Database infrastructure** with RDS instances
+- **Reusable modules** for common infrastructure patterns
+- **Production-ready configurations** with proper variable management
 
 ## 📁 Course Structure
 
@@ -191,6 +224,7 @@ Begin with Day 1 and progress through each module sequentially.
 - **Best Practices**: Industry-standard patterns and conventions
 - **Security Focus**: Secure infrastructure deployment
 - **Cross-Platform**: Works on macOS, Windows, and Linux
+- **Production-Ready**: Real-world scenarios and configurations
 
 ## 📋 Example Usage
 
@@ -223,16 +257,47 @@ resource "aws_instance" "web" {
 }
 ```
 
+### VPC Module Usage
+```hcl
+# Example from Day 6
+module "vpc" {
+  source = "./modules/vpc"
+  
+  vpc_cidr = "10.0.0.0/16"
+  environment = "production"
+  
+  public_subnets = ["10.0.1.0/24", "10.0.2.0/24"]
+  private_subnets = ["10.0.3.0/24", "10.0.4.0/24"]
+}
+```
+
 ## 🎓 Learning Path
 
-1. **Beginner**: Start with Day 1 modules
-2. **Intermediate**: Progress through Day 2 concepts
-3. **Advanced**: Master Day 3 advanced features
-4. **Practice**: Work through all examples and exercises
+### **Week 1: Foundation & Core Concepts**
+1. **Day 1**: Terraform basics and first deployment
+2. **Day 2**: Variables, data sources, and security
+3. **Day 3**: Advanced patterns with count and loops
+
+### **Week 2: Advanced Infrastructure**
+4. **Day 4**: Multi-AZ deployments and for-each
+5. **Day 5**: VPC design and module basics
+6. **Day 6**: Advanced modules and production patterns
+
+### **Skill Progression**
+- **Beginner** (Day 1-2): Basic Terraform concepts and simple deployments
+- **Intermediate** (Day 3-4): Advanced patterns and multi-resource management
+- **Advanced** (Day 5-6): Complex architectures and production-ready modules
 
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+### How to Contribute
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## 📄 License
 
@@ -243,6 +308,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - HashiCorp for creating Terraform
 - AWS for providing the cloud platform
 - The open-source community for continuous improvements
+- All contributors who help improve this training material
 
 ## 📞 Support
 
@@ -258,6 +324,7 @@ If you encounter any issues or have questions:
 - [AWS Provider Documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 - [Terraform Best Practices](https://www.terraform.io/docs/cloud/guides/recommended-practices/index.html)
 - [HashiCorp Learn](https://learn.hashicorp.com/terraform)
+- [Terraform Registry](https://registry.terraform.io/)
 
 ---
 
