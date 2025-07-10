@@ -6,7 +6,7 @@ resource "null_resource" "example" {
   connection {
     type        = "ssh"
     user        = "ec2-user"
-    private_key = "${path.module}/private-key.pem"
+    private_key = file("${path.module}/private-key.pem")
     host        = aws_eip.elastic_ip.public_ip
   }
   provisioner "file" {
