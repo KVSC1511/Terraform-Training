@@ -255,6 +255,13 @@ Begin with Day 1 and progress through each module sequentially.
 - **depends_on**: Explicit resource dependencies and orchestration
 - **Best Practices**: Secure access, production patterns
 
+### Day 8: Production-Ready Infrastructure
+- **Advanced Modules**: Complex module composition and reuse
+- **Remote State Management**: S3 backend, state locking, and security
+- **Workspaces**: Environment isolation (dev, staging, prod)
+- **Production Deployment**: Strategies, automation, and best practices
+- **Compliance & Governance**: Security and policy considerations
+
 ## 🔧 Key Features
 
 - **Hands-on Practice**: Every concept includes working examples
@@ -325,10 +332,14 @@ module "vpc" {
 ### **Week 3: Advanced Networking & Provisioning**
 7. **Day 7**: Advanced networking, Bastion, and provisioners
 
+### **Week 4: Production-Ready Infrastructure**
+8. **Day 8**: Production modules, remote state, workspaces, and compliance
+
 ### **Skill Progression**
 - **Beginner** (Day 1-2): Basic Terraform concepts and simple deployments
 - **Intermediate** (Day 3-4): Advanced patterns and multi-resource management
 - **Advanced** (Day 5-7): Complex architectures and production-ready modules
+- **Expert** (Day 8): Enterprise patterns, remote state, and compliance
 
 ## 🤝 Contributing
 
