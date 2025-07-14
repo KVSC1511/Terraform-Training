@@ -833,3 +833,31 @@ This improves code structure and separates concerns.
 * Simplifies main configuration files.
 * Encourages **modular, DRY code**.
 * Easy to manage lifecycle of isolated components (e.g., VPC, IAM, ALB).
+
+---
+
+### **Q45. How can you import an existing AWS resource into Terraform?**
+
+**Answer:**
+You can use the `terraform import` command to bring existing AWS resources under Terraform management. This is useful when you want to manage already-created infrastructure using Terraform.
+
+---
+
+** Example**
+
+```bash
+terraform import aws_s3_bucket.example my-bucket-name
+```
+
+After importing, define the resource manually in your `.tf` file:
+
+```hcl
+resource "aws_s3_bucket" "example" {
+  bucket = "my-bucket-name"
+}
+```
+
+>  **Note:** Terraform does **not generate the code** for you.
+> You must manually define the resource block to match the imported infrastructure.
+
+
