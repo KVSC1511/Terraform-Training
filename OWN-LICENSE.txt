@@ -1,0 +1,10 @@
+Custom License for Terraform-Training
+
+You may specify your own terms and conditions for the use, distribution, and modification of this project here.
+
+Example:
+- You may use this code for educational and non-commercial purposes only.
+- Commercial use requires explicit permission from the author.
+- Attribution must be given in all derivative works.
+
+(Replace this text with your actual license terms.) 
