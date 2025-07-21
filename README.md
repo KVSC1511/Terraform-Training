@@ -178,6 +178,63 @@ Day-8/
 - Production deployment strategies and security best practices
 - Compliance and governance considerations for enterprise environments
 
+### **Day 9: Complete Infrastructure with ALB & Bastion**
+```
+Day-9/
+├── app1.sh, app2.sh, bastion-ip.txt, private-key.pem
+├── t1-versions.tf, t2-generic-variables.tf, t3-locals.tf
+├── t4-01-vpc.tf, t4-02-vpc-variables.tf, t4-03-vpc-outputs.tf
+├── t5-01-bastion-sg.tf, t5-02-bastion-sg-outputs.tf
+├── t5-03-private-ec2-sg.tf, t5-04-private-ec2-sg-outputs.tf
+├── t6-01-data-source-ami.tf
+├── t7-01-bastion-ec2.tf, t7-02-bastion-ec2-variables.tf, t7-03-private-ec2.tf, t7-04-ec2-outputs.tf
+├── t8-01-elastic-ip.tf
+├── t9-null-resource.tf
+├── t10-alb.tf, t11-alb-sg.tf, t12-acm.tf, t13-alias.tf
+```
+
+**Topics Covered:**
+- Complete VPC, Bastion, and private EC2 setup
+- Application Load Balancer (ALB) configuration
+- ACM SSL certificate and Route 53 alias
+- Security groups, EIPs, and null resources
+- End-to-end infrastructure automation
+
+### **Day 10: State Management, S3 Backend, and Workspaces**
+```
+Day-10/
+├── backend-info/README.md
+├── terraform-code/ (all tf and sh files, private-key.pem, bastion-ip.txt)
+├── workspace-info/README.md
+```
+
+**Topics Covered:**
+- S3 backend configuration for remote state
+- State locking and security
+- Workspaces for environment isolation
+- Advanced ALB, ACM, and VPC patterns
+- Practical workspace and backend management
+
+### **Day 11: Local Modules, Provider Aliases, and Import**
+```
+Day-11/
+├── Terraform-import-Notes/README.md
+├── local-modules-notes/README.md
+├── provider-alias-notes/README.md
+├── terraform-code/terraform-alias/
+├── terraform-code/terraform-import/
+├── terraform-code/terraform-local-module/
+├── terraform-code/terraform-workspaces/
+├── workspaces-notes/README.md
+```
+
+**Topics Covered:**
+- Writing and using local modules
+- Provider aliasing for multi-account/multi-region
+- Importing existing resources into Terraform
+- Advanced workspace and module usage
+- Real-world infrastructure migration
+
 ## 🛠️ Prerequisites
 
 Before starting this course, ensure you have:
@@ -262,6 +319,27 @@ Begin with Day 1 and progress through each module sequentially.
 - **Production Deployment**: Strategies, automation, and best practices
 - **Compliance & Governance**: Security and policy considerations
 
+### Day 9: Complete Infrastructure with ALB & Bastion
+- **Complete VPC, Bastion, and private EC2 setup**
+- **Application Load Balancer (ALB) configuration**
+- **ACM SSL certificate and Route 53 alias**
+- **Security groups, EIPs, and null resources**
+- **End-to-end infrastructure automation**
+
+### Day 10: State Management, S3 Backend, and Workspaces
+- **S3 backend configuration for remote state**
+- **State locking and security**
+- **Workspaces for environment isolation**
+- **Advanced ALB, ACM, and VPC patterns**
+- **Practical workspace and backend management**
+
+### Day 11: Local Modules, Provider Aliases, and Import
+- **Writing and using local modules**
+- **Provider aliasing for multi-account/multi-region**
+- **Importing existing resources into Terraform**
+- **Advanced workspace and module usage**
+- **Real-world infrastructure migration**
+
 ## 🔧 Key Features
 
 - **Hands-on Practice**: Every concept includes working examples
@@ -335,11 +413,17 @@ module "vpc" {
 ### **Week 4: Production-Ready Infrastructure**
 8. **Day 8**: Production modules, remote state, workspaces, and compliance
 
+### **Week 5: Complete Infrastructure, State Management, and Advanced Modules**
+9. **Day 9**: Complete VPC, Bastion, ALB, and automation
+10. **Day 10**: S3 backend, remote state, and workspace management
+11. **Day 11**: Local modules, provider alias, and resource import
+
 ### **Skill Progression**
 - **Beginner** (Day 1-2): Basic Terraform concepts and simple deployments
 - **Intermediate** (Day 3-4): Advanced patterns and multi-resource management
 - **Advanced** (Day 5-7): Complex architectures and production-ready modules
 - **Expert** (Day 8): Enterprise patterns, remote state, and compliance
+- **Master** (Day 9-11): Full-stack automation, state management, and migration
 
 ## 🤝 Contributing
 
